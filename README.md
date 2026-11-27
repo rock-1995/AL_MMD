@@ -11,4 +11,8 @@ For separate performer motions, use `dancers/<part>/motion.vmd` inside the song
 folder. The free camera uses right-drag to orbit, middle-drag to pan, and the wheel
 to zoom.
 
+The [example layouts](examples/Songs) use empty placeholder files for single and
+multiple performers. Replace the placeholders with your own files before copying
+a song folder into the plugin's library.
+
 Build with `dotnet build src/AL_MMD.csproj -c Release -p:GameDir=<game directory>`.
