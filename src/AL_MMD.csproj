@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>AL_MMD</AssemblyName>
+    <Version>0.4.3</Version>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CheckEolTargetFramework>false</CheckEolTargetFramework>
+    <NuGetAudit>false</NuGetAudit>
+    <GameDir Condition="'$(GameDir)' == ''">$(AL_GAME_DIR)</GameDir>
+    <InteropDir>$(GameDir)\BepInEx\interop-AmanatsuLocation\interop</InteropDir>
+    <CoreDir>$(GameDir)\BepInEx\core</CoreDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NativeResponse.bin" LogicalName="ALMMD.NativeResponse.bin" />
+    <None Update="AL_MMD.NativeClothes.unity3d" CopyToOutputDirectory="PreserveNewest" />
+    <Reference Include="$(InteropDir)\*.dll"><Private>false</Private></Reference>
+    <Reference Include="$(CoreDir)\BepInEx.Core.dll"><Private>false</Private></Reference>
+    <Reference Include="$(CoreDir)\BepInEx.Unity.Common.dll"><Private>false</Private></Reference>
+    <Reference Include="$(CoreDir)\BepInEx.Unity.IL2CPP.dll"><Private>false</Private></Reference>
+    <Reference Include="$(CoreDir)\Il2CppInterop.Runtime.dll"><Private>false</Private></Reference>
+    <Reference Include="$(CoreDir)\Il2CppInterop.Common.dll"><Private>false</Private></Reference>
+    <Reference Include="$(CoreDir)\0Harmony.dll"><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>
