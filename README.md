@@ -1,6 +1,7 @@
 # AL MMD
 
 Plays MikuMikuDance motion files in AmanatsuLocation. Requires BepInEx 6 IL2CPP.
+AL Heels is optional and provides heel support.
 
 Extract the release ZIP into the game folder. Put each song in its own folder under
 `BepInEx/plugins/AL_MMD/Songs` with `music.wav` and `motion.vmd`. Add `camera.vmd`
